@@ -1,0 +1,88 @@
+Comtrancable
+http://www.comtrancorp.com/
+
+==========================================================================================
+
+Update Version 1.5 to 2.5 Changes on virtuemart
+
+Virtuemart Changes
+Forum : http://forum.virtuemart.net/index.php?topic=97744.0	
+
+********* Modules **********
+
+Product Catalog  - (Left side)
+Custom Html module - Product Catalog Header 
+
+Left Menu Bottom-PDF
+Custom Html module - Product Catalog - Left Menu Bottom  - PDF Catalog Promo
+
+Product Catalog Full Category List Menu
+Modules 
+
+
+******** Components *********
+
+For Front page right side - http://192.168.3.111/comtrancable_259/index.php/product
+/var/www/comtrancable_259/components/com_virtuemart/views/virtuemart/tmpl/default_categories.php
+
+For Sub Category page right side - http://192.168.3.111/comtrancable_259/index.php/product/premise-data
+/var/www/comtrancable_259/components/com_virtuemart/views/category/tmpl/default.php
+
+
+For Categories content page 
+/var/www/comtrancable_259/components/com_virtuemart/views/category/tmpl/default.php
+	sftp://192.168.3.8/var/www/comtrancable/components/com_virtuemart/themes/default/templates/browse/includes/browse_notables.tpl.php
+	
+
+******** Custom Fields in categories for right column table  *********
+
+product_attribute, category_right_description - 2 fields add In database wpwmo_virtuemart_categories_en_gb table
+ 
+Product Attribute, Right Description
+/var/www/comtrancable_259/administrator/components/com_virtuemart/views/category/tmpl/edit_categoryform.php
+
+add fields Product Attribute, Right Description
+/var/www/comtrancable_259/administrator/components/com_virtuemart/tables/categories.php
+
+add fields Product Attribute, Right Description in save function
+var/www/comtrancable_259/components/com_virtuemart/controllers/category.php
+
+
+For PDF file
+var/www/comtrancable_259/administrator/components/com_virtuemart/helpers/mediahandler.php
+
+displayFilesHandlerProduct
+var/www/comtrancable_259/administrator/components/com_virtuemart/views/product/tmpl/product_edit_images.php
+var/www/comtrancable_259/administrator/components/com_virtuemart/helpers/mediahandler.php
+
+For Rename Virtuemart to Products menu
+administrator/language/en-GB/en-GB.com_virtuemart.sys.ini
+
+For URL rewrite
+Set "Use URL rewriting" radio Yes in global configuration of admin site menu 
+htaccess.txt to .htaacess
+
+
+
+********  Customize plugin code for category links disable******** 
+
+/var/www/comtrancable_259/plugins/xmap/com_virtuemart
+
+pass $level increment decrement and 
+if($level > 2){
+	$node->browserNav = 3;
+}
+
+
+Search Component for result
+Yoo search module  
+Query in Search plugin
+
+
+
+
+
+
+
+
+

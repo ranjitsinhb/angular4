@@ -1,0 +1,442 @@
+Autopw
+
+Fremework/CMS : Joomla
+======================================================================================
+
+LIVE : 
+http://www.autopw.com/
+http://www.autopw.com/administrator/
+
+Docncrypt : 
+http://docncrypt.azstec.com/
+http://docncrypt.azstec.com/administrator
+User : admin
+Pass : Baroda9$	
+
+
+LOCAL:
+http://192.168.3.111/autopw/index.php
+http://192.168.3.111/autopw/administrator
+
+**************************************************************************************
+FTP Detail 
+**************************************************************************************
+Host : softwebcms.com
+User : softwebc
+Pass : &@DN!\O3[QR;.Bhw>
+
+
+************************************************************************************** 
+CMS CPanel Detail 
+**************************************************************************************
+  
+https://backstage.site5.com
+ripal@softwebsolutions.com
+softweb32	
+
+Autopw :
+50.62.9.133
+username : auto_admin
+passwrod : @Ut0Pw@!@#fTp
+
+Docncrypt :
+https://c10243.sgvps.net:2083/ 
+user: azstec24
+password : +A5st3c-
+New Password : !n2rtpF^.Gh-ImhkR5
+
+
+
+
+FTP :
+37.60.227.90
+PORT: 18765
+SFTP
+username: azstec24
+
+************************************************************************************** Database Detail 
+**************************************************************************************
+DB Name : 
+user : 
+password : 
+
+======================================================================================
+
+Durango three steps : 
+https://www.durangomerchantservices.com/gateway-integration/
+
+8tBufa25jgn565AKM698HHrptY943A3C
+Key iD: 5424965
+
+https://www.durangomerchantservices.com/merchant-login/
+Username: durango
+Password: test1234
+
+======================================================================================
+**************************************************************************************
+
+Webservice Work On :
+
+\index.php?option=com_services&task=Deviceregistration&email={0}&key={1}&mac={2}
+\index.php?option=com_services&task=Keyvalidation&email={0}&key={1}&mac={2}
+
+\index.php?option=com_services&task=Keyvalidation
+\index.php?option=com_services&task=Deviceregistration
+Body of POST Value : 
+	task=Keyvalidation&email=ranjitsinh.bhalgariya@softwebsolutions.com&key=da85506697454e15&mac={"ProcessorID":"rbBFEBFBFF0001067A","BoardNumber":"rbAZRQ00100W8B","DiskSerial":"rb2020202020202020202020205636414d34595351","OSNumber":"rb55041-006-2371125-86394","MacAddress":"rb00270E18C733"}&apptype=outlook
+	
+	task=Keyvalidation&email=ranjitsinh.bhalgariya@softwebsolutions.com&key=53555252e1871a6a&mac={"ProcessorID":"rbBFEBFBFF0001067A","BoardNumber":"rbAZRQ00100W8B","DiskSerial":"rb2020202020202020202020205636414d34595351","OSNumber":"rb55041-006-2371125-86394","MacAddress":"rb00270E18C733"}&apptype=desktop
+
+
+	task=Deviceregistration&email=ranjitsinh.bhalgariya@softwebsolutions.com&key=da85506697454e15&mac={"ProcessorID":"rbBFEBFBFF0001067A","BoardNumber":"rbAZRQ00100W8B","DiskSerial":"rb2020202020202020202020205636414d34595351","OSNumber":"rb55041-006-2371125-86394","MacAddress":"rb00270E18C733"}&apptype=outlook
+	&pcname=testpc
+
+
+
+
+Database Tables
+	_installation
+
+/var/www/autopw/components/com_services/controller.php
+
+======================================================================================
+
+
+Database Changes :
+
+Insert two fields :
+	ALTER TABLE `zjgl8_installation` 
+	ADD `app_type` VARCHAR( 255 ) NOT NULL AFTER `mac_address` , 
+	ADD `pc_name` VARCHAR( 255 ) NOT NULL AFTER `app_type` 
+
+Insert app type field :
+	ALTER TABLE `zjgl8_keyregistration` ADD `app_type` VARCHAR( 255 ) NOT NULL 
+
+For Admin Order Info
+	ALTER TABLE `zjgl8_keyregistration` ADD `transaction_id` VARCHAR(255) NOT NULL AFTER `app_type`;
+
+
+For New Order Component in adminpanel
+
+INSERT INTO `autopw`.`zjgl8_extensions` (
+`extension_id` ,
+`name` ,
+`type` ,
+`element` ,
+`folder` ,
+`client_id` ,
+`enabled` ,
+`access` ,
+`protected` ,
+`manifest_cache` ,
+`params` ,
+`custom_data` ,
+`system_data` ,
+`checked_out` ,
+`checked_out_time` ,
+`ordering` ,
+`state`
+)
+VALUES (
+NULL , 'com_order', 'component', 'com_order', '', '1', '1', '1', '1', '', '{"administrator":"en-GB","site":"en-GB"}', '', '', '0', '0000-00-00 00:00:00', '0', '0'
+);
+
+
+ INSERT INTO `autopw`.`zjgl8_menu` (
+`id` , 
+`menutype` ,
+`title` ,
+`alias` ,
+`note` ,
+`path` ,
+`link` ,
+`type` ,
+`published` ,
+`parent_id` ,
+`level` ,
+`component_id` ,
+`checked_out` ,
+`checked_out_time` ,
+`browserNav` ,
+`access` ,
+`img` ,
+`template_style_id` ,
+`params` ,
+`lft` ,
+`rgt` ,
+`home` ,
+`language` ,
+`client_id`
+)
+VALUES (
+NULL , 'main', 'Orders!', 'Orders', '', 'order', 'index.php?option=com_order', 'component', '0', '1', '1', '10025', '0', '0000-00-00 00:00:00', '0', '1', 'class:component', '0', '', '97', '98', '0', '', '1'
+)
+
+
+
+* changed api-key in confirm controller
+
+
+Webservice Changes
+	/var/www/autopw/components/com_services/controller.php
+
+Insert products in Try it For 30 Days popup 
+	/var/www/autopw/components/com_simpleregistration
+
+Component Changes :
+	/var/www/autopw/components/com_products/
+	/var/www/autopw/components/com_users/models/profile.php
+
+    /var/www/autopw/components/com_faq/models/faq.php
+    /var/www/autopw/components/com_faq/views/faq/tmpl/downloads.php
+
+
+Administrator
+	/var/www/autopw/administrator/components/com_orders/
+	/var/www/autopw/administrator/components/com_product/
+
+Templates Changes
+	/var/www/autopw/templates/protostar/index.php	
+ 	/var/www/autopw/templates/protostar/html/com_users/login/default_login.php
+ 	/var/www/autopw/templates/protostar/html/com_users/login/default_registration.php
+ 	/var/www/autopw/templates/protostar/html/com_users/profile/default_core.php
+	/var/www/autopw/templates/protostar/css/template.css
+	/var/www/autopw/templates/protostar/images/cart_image.png
+
+Rohan Changes :
+	/var/www/autopw/components/com_products/models/products.php
+ 	/var/www/autopw/components/com_products/views/renew/tmpl/default.php
+	/var/www/autopw/components/com_users/models/profile.php
+ 	/var/www/autopw/templates/protostar/html/com_users/profile/default_core.php
+
+
+======================================================================================
+
+Query :
+
+Should "App type" field in database _keyregistration table and mail when product insert ?
+Where to check PCName ?
+
+where to set and what user of renew_qty and renewliscence on session in checkout view ?
+what use of hidden product_id in checkout view ?
+what use of hidden renewprocess in checkout view ?
+
+======================================================================================
+
+New design
+http://bbmd-inc.com/clients/azstec/
+
+
+doc encrypt Replace with autopw
+
+var/www/autopw/templates/protostar/index.php
+
+/var/www/autopw/components/com_features/views/features/tmpl/default.php
+/var/www/autopw/components/com_faq/views/faq/tmpl/default.php
+/var/www/autopw/components/com_products/views/products/tmpl/default.php
+/var/www/autopw/components/com_trainingvideo/views/trainingvideo/tmpl/default.php
+/var/www/autopw/components/com_faq/views/faq/tmpl/allarticles.php
+
+var/www/autopw/components/com_products/views/renew/tmpl/default.php
+var/www/autopw/components/com_products/views/product/tmpl/default.php
+var/www/autopw/components/com_products/views/product/tmpl/thankyou.php
+var/www/autopw/components/com_products/views/confirm/tmpl/default.php
+var/www/autopw/components/com_products/views/checkout/tmpl/default.php	
+
+var/www/autopw/templates/protostar/html/com_users/login/default_login.php
+var/www/autopw/templates/protostar/html/com_users/login/default_registration.php
+
+var/www/autopw/templates/protostar/html/com_users/profile/default_core.php
+var/www/autopw/templates/protostar/html/com_users/profile/edit.php
+
+var/www/autopw/templates/protostar/html/com_users/registration/complete.php
+var/www/autopw/templates/protostar/html/com_users/registration/default.php
+var/www/autopw/templates/protostar/html/com_users/reset/complete.php
+var/www/autopw/templates/protostar/html/com_users/reset/confirm.php
+var/www/autopw/templates/protostar/html/com_users/reset/default.php
+
+======================================================================================
+
+/var/www/autopw/modules/mod_simpleregistration/tmpl/default.php
+/autopw/components/com_products/views/product/tmpl/default.php
+/autopw/components/com_content/views/article/tmpl/default.php
+/autopw/components/com_faq/views/faq/tmpl/default.php
+/autopw/components/com_products/views aama badha ma default.php
+/autopw/components/com_featrure/views/article/tmpl/default.php
+/autopw/components/com_trainingvideo/views/article/tmpl/default.php
+/autopw/components/com_simpleregistration/views/article/tmpl/default.php
+
+======================================================================================
+
+Changes of App Type 
+
+/var/www/autopw/components/com_simpleregistration/controller.php
+/var/www/autopw/components/com_products/controllers/confirm.php
+/var/www/autopw/components/com_services/controller.php
+
+======================================================================================
+
+Customer Trak Component Entry
+
+INSERT INTO `zjgl8_extensions` (`name`, `type`, `element`, `folder`, `client_id`, `enabled`, `access`, `protected`, `manifest_cache`, `params`, `custom_data`, `system_data`, `checked_out`, `checked_out_time`, `ordering`, `state`) VALUES
+('com_customertrak', 'component', 'com_customertrak', '', 1, 1, 1, 1, '', '{"administrator":"en-GB","site":"en-GB"}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+
+INSERT INTO `zjgl8_menu` (`menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES ('main', 'Customer Trak !', 'Customer Trak', '', 'customertrak', 'index.php?option=com_customertrak', 'component', '0', '1', '1', '10025', '0', '0000-00-00 00:00:00', '0', '1', 'class:component', '0', '', '97', '98', '0', '', '1');
+
+======================================================================================
+
+Use of dynamic getConfig() data devices number on datacount
+
+
+http://115.115.91.43/autopw/index.php?option=com_services&task=Keyvalidation&email=kaushal.patel@softwebsolutions.com&key=10e530b2054d8228&mac={"ProcessorID":"555BFBFF00020655","BoardNumber":"555C140002J9","DiskSerial":"555020202020202020202020325a454152465111","OSNumber":"55541-006-2371125-86GGG","MacAddress":"5550776B9BBB"}
+
+======================================================================================
+
+New Changes :
+
+1) Account registration without confirmation token link
+	In admin panel
+	Users >> User Manager >> Component >> New User Account Activation - None
+
+	message : 'Thank you for registering at AutoPW. Your account is created and activated'. 
+
+	Files :
+	/language/en-GB/en-GB.com_users.ini
+	
+
+2) New Tab for no licence user	
+	        Insert nocustomer view for customertrak component
+	/var/www/autopw/administrator/components/com_customertrak/controller.php
+	/var/www/autopw/administrator/components/com_customertrak/helpers/customertrak.php
+	/var/www/autopw/administrator/components/com_customertrak/models/nocustomer.php
+	/var/www/autopw/administrator/components/com_customertrak/views/nocustomer
+
+
+	
+3) Thank you page Key
+	       Insert Licence key value in session 
+	/115.115.91.43/var/www/autopw/components/com_products/controllers/confirm.php
+	/115.115.91.43/var/www/autopw/components/com_products/views/products/tmpl/thankyou.php
+
+
+======================================================================================
+
+Autopw Live Changes  - For Site Working
+
+	- Commented error lines 
+	/httpdocs/index.php 
+	/httpdocs/components/com_content/content.php
+
+======================================================================================
+
+New Component Buildmanager for administrator and changes
+
+
+INSERT INTO `zjgl8_extensions` (`extension_id`, `name`, `type`, `element`, `folder`, `client_id`, `enabled`, `access`, `protected`, `manifest_cache`, `params`, `custom_data`, `system_data`, `checked_out`, `checked_out_time`, `ordering`, `state`) VALUES (NULL, 'com_buildmanager', 'component', 'com_buildmanager', '', '1', '1', '1', '1', '', '{"administrator":"en-GB","site":"en-GB"}', '', '', '0', '0000-00-00 00:00:00', '0', '1');
+
+INSERT INTO `zjgl8_menu` (`menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES ('main', 'Customer Trak !', 'Build Manager', '', 'buildmanager', 'index.php?option=com_buildmanager', 'component', '0', '1', '1', '10029', '0', '0000-00-00 00:00:00', '0', '1', 'class:component', '0', '', '97', '98', '0', '', '1');
+
+
+=> create buildmanager directory on root
+=> database buildmanager table 
+=> keyregistration field - build_version_id - int(11)
+=> Upload component in /administrator/components/com_buildmanager
+=> New webservice buildmanager and changes of webservice devicemanager
+
+======================================================================================
+
+Webservices
+https://docncrypt.azstec.com/index.php?option=com_services&task=buildmanager
+http://192.168.3.111/autopw/index.php?option=com_services&task=buildmanager
+Post Value :
+{ "buildVer":"1.4.2", "appType":"1" }
+
+For copy component com_serviceshttps :
+
+INSERT INTO `zjgl8_extensions` (`name`, `type`, `element`, `folder`, `client_id`, `enabled`, `access`, `protected`, `manifest_cache`, `params`, `custom_data`, `system_data`, `checked_out`, `checked_out_time`, `ordering`, `state`) VALUES
+('com_serviceshttps', 'component', 'com_serviceshttps', '', 1, 1, 1, 1, '', '{"administrator":"en-GB","site":"en-GB"}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+
+**************************************************************************************
+
+HTTP to https Changes and exception for com_services:
+
+Outside htacess : REMOVE redirect /security/ https://security.azstec.com/
+CAPTCHA HTTP: /docncrypt/components/com_simpleregistration/views/registrationform/tmpl/recaptchalib.php
+IN htaccess: Backup upload
+Configuration.php : $live_site = ''
+Configuration.php : $force_ssl = 0;
+ADMININSTRATOR: https://docncrypt.azstec.com/administrator/index.php?option=com_modules - AutoPWFeed - Feed URL http
+
+
+======================================================================================
+
+/var/www/autopw/components/com_simpleregistration/controller.php
+
+Is Production Active/Deactive
+/administrator/components/com_buildmanager/views/buildmanagers/tmpl/default.php
+/administrator/components/com_buildmanager/controllers/buildmanagers.php
+/administrator/components/com_buildmanager/models/buildmanagers.php
+
+======================================================================================
+
+=> add "build" field on admin component customertrack "free licence" tab and "paid licence" tab
+Fcustomer and Pcustomer - model and view 
+
+======================================================================================
+
+For ordering on com videodoc
+
+Add column for ordering
+	ALTER TABLE `zjgl8_videodoc` CHANGE `ordering` `ordering` INT( 11 ) NOT NULL DEFAULT '0'
+
+File Changes :
+	/administrator/components/com_videodoc/views/videodoc/tmpl/edit.php
+	/administrator/components/com_videodoc/models/forms/videodoc.xml
+
+	/components/com_videodoc/models/videodoc.php
+	/components/com_videodoc/models/documents.php
+
+======================================================================================
+
+http://192.168.3.111/autopw/index.php?option=com_services&task=Deviceregistration
+
+Post Data :
+email=naresh.thakor@softwebsolutions.com&key=d6656bac313182f6&mac={"ProcessorID":"BFEBFBFF00020655","BoardNumber":"BTTC140002J9","DiskSerial":"202020202020202020202020325a454152465056","OSNumber":"55041-006-2371125-86551","MacAddress":"00059A3C7800"}&apptype=outlook&build_version=4.3.4
+
+
+Live upload build manager and service
+
+devicemanager service changes
+
+Changes of download build zip file 
+
+For Free trial
+	/components/com_simpleregistration/controller.php
+
+For Downloads page link in bottom
+	/components/com_faq/views/faq/tmpl/downloads.php
+	/components/com_faq/models/faq.php
+
+For Product Thank You Page
+	/components/com_products/views/confirm/tmpl/default.php
+	/components/com_products/views/products/tmpl/thankyou.php
+	/components/com_products/controllers/confirm.php
+			
+
+======================================================================================
+
+Modals Popup 
+
+https://c10243.sgvps.net:2083/cpsess7984856712/3rdparty/phpMyAdmin/index.php
+http://demo.nonumber.nl/index.php/12-modals#simple-modals
+
+
+Purchased extesnstion for modal popup 
+modals-v6.4.0-pro.zip
+
+Create Module for admin settings
+mod_popup
+
+
+INSERT INTO `zjgl8_extensions` (`name`, `type`, `element`, `folder`, `client_id`, `enabled`, `access`, `protected`, `manifest_cache`, `params`, `custom_data`, `system_data`, `checked_out`, `checked_out_time`, `ordering`, `state`) VALUES
+('Modal Popup', 'module', 'mod_popup', '', 0, 1, 0, 0, '{"name":"Modal Popup","type":"module","creationDate":"April 2012","author":"Tristan Brookes","copyright":"Copyright (C) 2012 Tristan Brookes\\/Code7","authorEmail":"tristan.brookes@code7webdesign.co.uk","authorUrl":"","version":"2.0.5","description":"A joomla responsive image slider module. Images currently must have captions in order to display!\\n\\tRemember, if you use a custom URL for a field it will be used instead of the menu item.","group":""}', '{"load_jquery":"1","fadeorslide":"0","uselinks":"1","directionNav":"0","controlNav":"0","keyboardNav":"0","direction":"0","slidespeed":"7000","animatespeed":"600","randomorder":"0","image1alt":"","image1cap":"","image1link":"","image1customlink":"","image2alt":"","image2cap":"","image2link":"","image2customlink":"","image3alt":"","image3cap":"","image3link":"","image3customlink":"","image4alt":"","image4cap":"","image4link":"","image4customlink":"","image5alt":"","image5cap":"","image5link":"","image5customlink":"","image6alt":"","image6cap":"","image6link":"","image6customlink":"","image7alt":"","image7cap":"","image7link":"","image7customlink":"","image8alt":"","image8cap":"","image8link":"","image8customlink":"","image9alt":"","image9cap":"","image9link":"","image9customlink":"","cache":"1","cache_time":"900","cachemode":"itemid"}', '', '', 0, '0000-00-00 00:00:00', 0, 0);

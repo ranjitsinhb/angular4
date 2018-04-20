@@ -1,0 +1,30 @@
+Virtual Host cinfiguration step
+====================================
+
+1. change in "/etc/hosts" file
+
+	127.0.0.1	"test.dev" 
+
+2. Change rewrite mode by following command
+
+	/etc/apache2/sites-enabled$ sudo a2enmod rewrite
+
+3. Create file in following path 
+
+	/etc/apache2/sites-available/test.conf
+
+	and put below inforamtion :
+
+	<VirtualHost *:80>
+		ServerAdmin webmaster@localhost
+		ServerName agyield.dev
+		DocumentRoot "/var/www/agyieldprod"
+	</VirtualHost>
+
+4. Execute following command
+
+	/etc/apache2/sites-available$ sudo a2ensite agyield.dev
+
+5. restart services by following command
+
+	sudo service apache2 restart

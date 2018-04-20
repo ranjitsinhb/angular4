@@ -1,0 +1,340 @@
+**ExpressionEngine**
+
+http://staging.alliantcreditunion.org/system/index.php
+Username: viralsoftweb
+Pwd : Alliant111
+
+
+
+Texas Database : 
+username: technexus
+password: pkEvPUEXtyJLrEWw
+
+===============================
+
+**Careband**
+
+Careband Git 
+
+Email:ranjitsinh.bhalgariya@softwebsolutions.com
+user: sw-tt-ranjitsinhbhalgariya
+pass: ranjit123
+
+git clone https://github.com/softweb/tt-careband.git
+git pull origin dev 
+
+
+Url:
+- careband.local
+- softweb.careband.local
+
+Database: 
+- careband_admin
+
+
+//==Commands==//
+- sudo find ./ -type d -exec chmod 755 {} \;
+- sudo find ./ -type f -exec chmod 644 {} \;
+
+- sudo chown -R ranjit:ranjit .
+- sudo chown -R ranjit:ranjit storage/ public/uploads/ bootstrap/cache/ public/basedatabasefile/
+- sudo chmod -R 777 storage/
+- sudo chmod -R 777 bootstrap/cache/
+
+//=====fire this command to /public/js path======//
+- cd public/js
+- chmod a+x node_modules/.bin/tsc
+
+- npm start
+
+
+===========================
+
+**HLC**
+
+DEV Front End :http://dev2016.hlcommission.org/Accreditation/indicators.html
+Live Front End :http://www.hlcommission.org/Accreditation/indicators.html
+
+Live Backend Article - https://www.hlcommission.org/administrator/index.php?option=com_content&view=articles
+DEV BAckend - http://dev2016.hlcommission.org/administrator/
+
+ Local : 192.168.3.222/html/hlcdev
+
+Authentication:
+tester/1Password23
+
+ADMIN: 
+softweb/admin123
+
+sh404SEF: URL manager
+
+
+==========================
+
+**Dragon Fly**
+
+School Code : 6ZU2QS
+
+**__Local__**
+
+http://localhost:1337/maxweb/max-cover/login
+
+user: tuadm@df.com
+pass: getem42
+
+user : jake+mbutler@dragonflyathletics.com 
+pass : Getem42*
+
+//Trainer// 
+user: niravb.softweb+intercomtr@gmail.com
+pass: Softweb#1
+
+user:  niravb.softweb+coach926@gmail.com
+pass:  Softweb+1
+
+//Athlate//
+ 
+user: mittal.bhatt@softwebsolutions.com 
+pass: mittal@123
+
+user: tushar.kapadia@softwebsolutions.com 
+pass: softweb#123
+
+user: stuart.dragonfly@mailinator.com
+pass: softweb#123
+
+Maxbeta url
+http://maxbeta.dragonflyathletics.com/
+
+=========================
+
+//Athlete//
+
+lee.dragon@mailinator.com
+softweb#123
+
+zia.dragon@mailinator.com
+softweb#123
+
+//Parent//
+
+april.parent@mailinator.com
+softweb#123
+
+//Coach//
+
+nell.coach@mailinator.com
+softweb#123
+
+nash.coach@mailinator.com
+softweb#123
+
+=========================
+
+
+**__For Multiple user__**
+- var/www/trunk/TrainingApiServer/src/handlers/accounts/usernameHeaderSetterHandler.js
+- res.setHeader('df-max-account-username', userAccount.usernames[0].username || userAccount.email || userAccount.mobile);
+
+
+__**Checkout**__
+
+sudo apt-get install subversion
+svn co https://svn.dragonflyathletics.com/svn/df/TrainingApiServer/trunk
+
+
+__**SVN Update/Commit**__
+
+cd  /dragonfly/trunk
+svn update
+svn commit FILE1_PATH  FILE2_PATH -m "YOUR_MESSAGE"
+
+
+__**Slack**__
+
+URL: https://dragonflymax.slack.com/x-205652592598-204937218981/signin
+email: ashwin.vadgama@softwebsolutions.com
+Username : ashwin
+Password : Ashwin123
+
+
+- Install Node - version : n 6.11.0
+npm install -g n
+
+- For Typescript to javascript compilation :
+var/www/trunk/TrainingApiServer/src/web/maxweb/app$ npm run tsc:w
+ 
+- For run project :
+var/www/trunk/TrainingApiServer$ node server.js --NODE_ENV=local2beta 
+
+===========================
+
+**SmartOffice**
+
+Local
+http://softweb.smartoffice.local:3000/
+
+Live
+http://softweb.softwebsmartoffice.com
+softweb@admin.com /admin
+
+APK file download url
+https://softwebsolutions.co.in/releasecloud/Project/SmartOfficeStg#Android
+
+Cron list
+http://admin.softwebsmartoffice.com/cron/checkupcomingbooking
+http://admin.softwebsmartoffice.com/cron/autocheckoutentry
+
+
+node app.js 
+ng build --watch
+ 
+add command Tag input 
+npm install ng2-tag-input --save
+
+
+__**Old Smartoffice**__
+
+http://smartoffice.softwebopensource.com
+user	: 	rohan@softwebsolutions.com
+pass 	:  	test
+
+Live 
+http://esdglobal.softwebsmartoffice.com/index#
+user  	: 	naimesh.prajapati@softwebsolutions.com
+pass 	: 	qwert
+
+ http://192.168.4.31:3000/
+User : dhaval.thaker@softwebsolutions.com
+Pass : 123456
+
+Database :http://192.168.3.75/phpmyadmin
+root/password
+
+dbname:smartoffice_live
+SoftwebHOQ
+
+
+===========================
+
+
+**Innovazone**
+
+
+https://github.com/innovazones/platform_devlopment.git
+
+InnovaZone Git Detail
+
+Email:ghanshyam.tank@softwebsolutions.com
+Password: admin#123
+user name: sw-tt-ghanshyamtank
+
+git init
+git remote add origin https://sw-tt-ghanshyamtank@github.com/innovazones/platform_devlopment.git
+git pull origin master
+
+
+PRODUCTION
+
+URL = softweb.izhips.com
+Webservice UserName = softweb@admin.com
+Webservice Password = admin
+
+DEVELOPEMENT ENVIRONMENT	
+
+URL = dev.izhips.com
+Webservice UserName = softweb@admin.com
+Webservice Password = admin
+
+QA ENVIRONMENT
+
+URL =  qa.izhips.com
+Webservice UserName = softweb@admin.com
+Webservice Password = admin
+
+MASTER
+
+Master devadmin.izhips.com
+Master qaadmin.izhips.com
+Master izhips.com
+
+
+OLD Site URL
+https://tap.izplatforms.com/loginaccesscheck.php
+https://tap.izplatforms.com/index.php?option=com_myaccount&task=appequipmentreport
+
+
+__**Permission Command for innovazone**__
+
+- sudo find ./ -type d -exec chmod 755 {} \;
+- sudo find ./ -type f -exec chmod 644 {} \;
+
+- sudo chown -R ranjit:ranjit .
+//- sudo chown -R www-data:www-data storage/ public/uploads/ bootstrap/cache/ public/basedatabasefile/
+- sudo chown -R ranjit:ranjit storage/ public/uploads/ bootstrap/cache/ public/basedatabasefile/
+- sudo chmod -R 777 storage/
+- sudo chmod -R 777 bootstrap/cache/
+
+//=====fire this command to /public/js path======//
+- cd public/js
+- chmod a+x node_modules/.bin/tsc
+
+- npm start
+
+
+- http://192.168.3.146/OLD_PROJECT/template/iottheme/build/nestable.html
+
+
+__**For IP Adderss  URL**__
+
+- qa_innovazone
+
+- http://192.168.3.185:5050/
+
+- /app/Http/Middleware/DbConnection.php
+- /app/Http/Middleware/DbConnectApi.php
+
+- /admin/constants.ts
+- If is company then - this.iscompany=true
+
+=================================
+
+Chrome Hang :
+
+chrome://settings/
+system >> continue running background apps....
+
+
+
+
+====================================
+
+**HMEI**
+
+Braintree sandbox login
+URL:https://sandbox.braintreegateway.com/login
+uname:tarundvarma
+pwd:tarun@123
+
+====================================
+
+**ESDGLOBAL**
+
+
+// Swagger Api
+http://dev-esd-building-api-wi.azurewebsites.net/swagger/index.html#!/
+http://dev-esd-user-api-wi.azurewebsites.net/swagger/index.html#!/User_Management/Get_users_list
+
+// Git 
+https://github.com/softweb/ms-esd-web
+git
+rohan.patel@softwebsolutions.com
+rohangit#123
+
+
+
+Bearer SUJQMnBJakhSJDJwSWoxMrLvusLFecr8x6DLvWm0BbNKZEQz4zB9GqyJi6ysZrzItI8Ktb/1C+AQeyyeyn0pBZVWznnL8X42jfw3Zc74sU3lyB+yVRneoWPpxMYX75oVAYjNWjM6mbbcITMDjWa/dN+hwazurIa7fBLbzKXYa0YH9hc5vwW3dI3Jl4EAmRI17oCujo/lZ0nd5duJLH23/Q==
+
+ Bearer SUJQMnBJakhSJDJwSWoxMrLvusLFecr8x6DLvWm0BbN35pDkQXiJqk25JwnqNsNcA/Dm9ZG0hWnRDDjKk59P4ylMe2ktB1msXOQxQ/fYsFWkj1jk1DltLWbUfqUC5+VXY0Ug76mJJnuhOi74aJYXyYx7xwecMG9oQLyboJl+OWwajFfqcRaLSAFTdrNYLqoOWC0X2G12eLNytNPSDfrZcA==
+
+

@@ -1,0 +1,73 @@
+Lowkal
+Fremework/CMS : opencart
+
+info@lowkal.in
+==========================================================================================
+
+http://www.lowkal.in/
+http://www.lowkal.in/admin/
+user : admin	
+pass : lowkal@admin
+
+*** FTP Detail ***
+Host: 118.139.171.1
+User: softweblowkal
+Password: Softweb30
+
+*** CPanel ***
+GoDaddy Username: 56375191
+GoDaddy Password: Calories90
+Database name: softweblowkal
+Database user name: softweblowkal
+Database Password: Softweb30
+
+==========================================================================================
+
+http://softwebcms.com/lowkal/
+
+Database : softwebc_lowkal
+User 	 : softwebc_lowkal
+password : Cz9Qktn25YaP25KLj	
+
+
+
+==========================================================================================
+
+
+
+Home Page
+	Search
+	location
+	slider managable by admin
+
+
+Mail Setting : 
+mail.softwebsolutions.com
+User : ranjitsinh.bhalgariya@softwebsolutions.com
+Pass : 5ZCT=i%4A]gb)cqD];
+port : 587
+
+
+
+
+Change Password Query : 
+
+UPDATE user SET password=md5('lowkal@admin') WHERE user_id = 1;
+
+
+
+For Meta Description
+
+	<file name="admin/language/english/catalog/information.php" error="skip">				
+	<file name="system/library/db.php">
+	<file name="admin/controller/catalog/information.php" error="skip">				
+	<file name="admin/model/catalog/information.php" error="skip">
+	<file name="admin/view/template/catalog/information_form.tpl" error="skip">				
+	<file name="catalog/controller/information/information.php" error="skip">	
+
+
+==>
+
+URL alias not working on live
+
+

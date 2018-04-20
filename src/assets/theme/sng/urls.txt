@@ -1,0 +1,57 @@
+Core php
+http://www.softwebsolutions.com/
+http://suntaxicab.com/
+
+Joomla
+http://www.autopw.com/ 
+http://docncrypt.azstec.com/ *Same as autopw
+http://www.comtrancorp.com/
+https://jobdecoder.com
+http://www.neejanand.com/
+http://www.salesreach.com/ (ecoommerce component: redshop)
+http://www.thenassauguardian.com/
+http://peepvouch.com/ (community: jomsocial)
+http://holnet.hollandco.com/
+http://softwebdemo.com/viral/drvasa
+http://www.hlcommission.org/
+
+Wordpress
+http://www.salesfusion.com/ 
+http://www.yjtrivedi.com/
+http://blog.softwebsolutions.com/
+http://www.zunamobile.com/
+http://www.shamrockif.com/
+http://hmei.org
+
+Opencart
+http://www.lowkal.in/
+
+Codeigniter
+http://softwebcms.com/bystronic/
+
+Magento
+http://www.shamrockif.com/
+
+Angular JS 
+https://hollandpay.hollandco.com/
+
+Laravel 
+Parking Toll (Duncan) Webservices with windows SAP
+http://duncansolutions.com
+
+Laravel + Angular2 
+innovazone
+
+Angular 2
+Dragonfly
+https://max.dragonflyathletics.com/maxweb
+
+Smartoffice : angular 2 + Node Express
+http://softweb.softwebsmartoffice.com
+http://texas.softwebsmartoffice.com
+
+
+Expression engine ( CMS )
+staging.alliant.com
+http://alliantcreditunion.org
+

@@ -1,0 +1,41 @@
+*** Credentials ***
+
+192.168.3.111
+
+PC 
+Username : ranjitsinh
+Password : root
+
+OMS
+http://192.168.3.112/oms/login.aspx?cnt=%2foms%2fDefault.aspx
+Username : ranjitsinh.bhalgariya@softwebsolutions.com
+Password : tmp123
+
+Spark
+Username : ranjitsinh.bhalgariya
+Password : softweb#456
+Server 	 : 192.168.3.255	
+
+Basecamphq Todo
+https://softwebsolutions.basecamphq.com/login
+Username : ranjitsinh.bhalgariya@softwebsolutions.com
+Password : ranjit123
+
+Email
+Username : ranjitsinh.bhalgariya@softwebsolutions.com
+Password : J$~VkpU8+&dA$We#BZ
+Server 	 : mail.softwebsolutions.com
+SMTP Port: 587
+POP Mail Server Port : 110
+Mail Server URL : https://www.softwebsolutions.com:2096/
+
+MIS
+http://122.182.14.118:8080/mis/login/auth
+Username : ranjitsinh.bhalgariya@softwebsolutions.com
+Password : tmp123
+
+
+
+
+
+
